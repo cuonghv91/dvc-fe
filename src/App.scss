@@ -1,0 +1,165 @@
+$primary-cl: #0f474c;
+$secondary-cl: #1d8382;
+$summer-cl: #f2efd3;
+$winter-cl: #353435;
+$happy-cl: #f73d1c;
+$sub-1: rgba(0,0,0,0.1);
+$warning: red;
+
+.util {
+  &_flex-row-center-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_flex-row-between-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_flex-col-center-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_radius {
+    border-radius: 2px;
+  }
+
+  &_radius-1 {
+    border-radius: 8px;
+  }
+
+  &_pointer {
+    cursor: pointer;
+  }
+
+  &_boder-box {
+    box-sizing: border-box;
+  }
+
+  &_typo-big-1 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &_typo-h1 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &_typo-h2 {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &_typo-h3 {
+    font-size: 10px;
+    line-height: 18px;
+  }
+
+  &_weight-300 {
+    font-weight: 300;
+  }
+
+  &_weight-400 {
+    font-weight: 400;
+  }
+
+  &_weight-500 {
+    font-weight: 500;
+  }
+
+  &_weight-600 {
+    font-weight: 600;
+  }
+
+  &_style-italic {
+    font-style: italic;
+  }
+
+  &_mgb-2 {
+    margin-bottom: 2px;
+  }
+
+  &_mgb-4 {
+    margin-bottom: 4px;
+  }
+
+  &_mgb-6 {
+    margin-bottom: 6px;
+  }
+
+  &_mgb-8 {
+    margin-bottom: 8px;
+  }
+}
+
+.app {
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: $sub-1;
+}
+
+.git-input-box {
+  width: 400px;
+  &__input {
+    border: none;
+    outline: none;
+    height: 30px;
+    width: calc(100% - 110px);
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  &__btn {
+    width: 100px;
+    height: 30px;
+    background: $secondary-cl;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.upload-box {
+  width: 400px;
+  &__area {
+    height: 200px;
+    border: 2px dashed $winter-cl;
+    background: $summer-cl;
+    position: relative;
+
+    &:hover {
+      background: $sub-1;
+    }
+  }
+
+  &__file-input {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  &__inform-text-area {
+    text-align: center;
+  }
+
+  &__error-message {
+    color: $warning;
+  }
+}
+
+.spinner {
+  width: 15px;
+  margin-left: 4px;
+}
