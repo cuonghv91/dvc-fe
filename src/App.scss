@@ -3,7 +3,7 @@ $secondary-cl: #1d8382;
 $summer-cl: #f2efd3;
 $winter-cl: #353435;
 $happy-cl: #f73d1c;
-$sub-1: rgba(0,0,0,0.1);
+$sub-1: rgba(0, 0, 0, 0.1);
 $warning: red;
 
 .util {
@@ -11,6 +11,13 @@ $warning: red;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+  }
+
+  &_flex-row-start-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
   }
 
@@ -162,4 +169,56 @@ $warning: red;
 .spinner {
   width: 15px;
   margin-left: 4px;
+}
+
+.dataset {
+  width: 500px;
+  border: 2px solid $sub-1;
+  background: white;
+
+  &__head {
+    height: 40px;
+    background: $secondary-cl;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: white;
+  }
+
+  &__content {
+    max-height: 200px;
+    overflow: auto;
+    /* width */
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+
+  &__item {
+    height: 35px;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__intro {
+    background-color: $summer-cl;
+    box-sizing: border-box;
+    padding: 16px;
+  }
 }
