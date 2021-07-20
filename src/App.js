@@ -88,7 +88,7 @@ function App() {
           const getDatasetList = await axios.get(UPLOAD_ENPOINT + "/dataset");
           setDatasetList(getDatasetList.data.list);
           setToggleGitSetup(true);
-          files(null);
+          setFiles(null);
           setErrorGit("");
           setError("");
         }
